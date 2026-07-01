@@ -61,6 +61,33 @@ skills/figma-mobbin-patterns/
 - Source designs are placed as **screenshots**, not clones (avoids unavailable-font failures).
 - Wrapping rows must use `counterAxisSizingMode = "AUTO"` or they collapse.
 
+## Contributing & releasing
+
+The installed skill can be symlinked to this repo for live editing:
+
+```bash
+ln -s "$PWD/skills/figma-mobbin-patterns" ~/.claude/skills/figma-mobbin-patterns
+```
+
+Edits then take effect immediately in Claude Code — no reinstall.
+
+**Cutting a release.** Keep the changelog version, the git tag, and the two manifest
+`version` fields (`.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json`) in
+lockstep — installers key off the manifest version; people read the changelog.
+
+1. Log changes under `## [Unreleased]` in [CHANGELOG.md](CHANGELOG.md) as you work.
+2. To release, rename `[Unreleased]` → `## [x.y.z] — <date>`, bump `version` in both
+   manifests, and update the compare/tag links at the bottom of the changelog.
+3. Tag and publish:
+   ```bash
+   git commit -am "Release vX.Y.Z"
+   git tag -a vX.Y.Z -m "vX.Y.Z — <summary>"
+   git push origin main vX.Y.Z
+   gh release create vX.Y.Z --title vX.Y.Z --notes-from-tag
+   ```
+
+Consumers pick up the new version with `/plugin marketplace update thamada-design-skills`.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
