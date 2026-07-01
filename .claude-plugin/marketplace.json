@@ -1,0 +1,16 @@
+{
+  "name": "thamada-design-skills",
+  "owner": { "name": "Taka Hamada" },
+  "metadata": {
+    "description": "Design workflow skills for Claude Code."
+  },
+  "plugins": [
+    {
+      "name": "figma-mobbin-patterns",
+      "source": "./",
+      "description": "Compare Figma designs against real-world UI patterns from Mobbin and build an annotated, per-screen reference board on a new page in the same Figma file.",
+      "version": "0.1.0",
+      "category": "design"
+    }
+  ]
+}

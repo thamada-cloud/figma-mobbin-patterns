@@ -1,0 +1,8 @@
+{
+  "name": "figma-mobbin-patterns",
+  "version": "0.1.0",
+  "description": "Compare Figma designs against real-world UI patterns from Mobbin and build an annotated reference board on a new page in the same Figma file.",
+  "author": { "name": "Taka Hamada" },
+  "homepage": "https://github.com/thamada-cloud/figma-mobbin-patterns",
+  "keywords": ["figma", "mobbin", "design-patterns", "competitive-analysis", "ux-research"]
+}
